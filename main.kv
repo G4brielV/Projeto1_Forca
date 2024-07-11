@@ -1,0 +1,20 @@
+#:include kv/home_page.kv
+#:include kv/selecao_tema.kv
+#:include kv/jogo.kv
+#:import utils kivy.utils
+
+GridLayout:
+    rows: 1
+    ScreenManager:
+        id: screen_manager
+        HomePage:
+            name: "home_page"
+            id: home_page
+        SelecaoTema:
+            name: "selecao_tema"
+            id: selecao_tema
+        Jogo:
+            name: "jogo"
+            id: jogo
+
+

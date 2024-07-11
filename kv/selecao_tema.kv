@@ -1,0 +1,44 @@
+<SelecaoTema>:
+    FloatLayout:
+        canvas:
+            Color:
+                rgb: utils.get_color_from_hex("#699cfa")
+            Rectangle:
+                size: self.size
+                pos: self.pos
+        Button:
+            pos_hint: {"right" : 0.8, "top" : 0.9}
+            size_hint: 0.6, 0.1
+            text: "Todos os países"
+            on_release: app.mudar_tela("jogo")
+
+        Button:
+            pos_hint: {"right" : 0.8, "top" : 0.8}
+            size_hint: 0.6, 0.1
+            text: "Países das Américas"
+            on_release: app.mudar_tela("jogo")
+
+        Button:
+            pos_hint: {"right" : 0.8, "top" : 0.7}
+            size_hint: 0.6, 0.1
+            text: "Países da África"
+            on_release: app.mudar_tela("jogo")
+
+        Button:
+            pos_hint: {"right" : 0.8, "top" : 0.6}
+            size_hint: 0.6, 0.1
+            text: "Países da Ásia"
+            on_release: app.mudar_tela("jogo")
+
+        Button:
+            pos_hint: {"right" : 0.8, "top" : 0.5}
+            size_hint: 0.6, 0.1
+            text: "Países da Europa"
+            on_release: app.mudar_tela("jogo")
+
+        Button:
+            pos_hint: {"right" : 0.8, "top" : 0.4}
+            size_hint: 0.6, 0.1
+            text: "Países da Oceania"
+            on_release: app.mudar_tela("jogo")
+

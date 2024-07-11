@@ -1,0 +1,30 @@
+<HomePage>:
+    FloatLayout:
+        canvas:
+            Color:
+                rgb: utils.get_color_from_hex("#699cfa")
+            Rectangle:
+                size: self.size
+                pos: self.pos
+
+        Image:
+            pos_hint: {"right" : 1, "top" : 1}
+            size_hint: 1, 0.55
+            source: "fotos/boneco_1_braco.png"
+
+        Label:
+            pos_hint: {"right" : 0.8, "top" : 0.5}
+            size_hint: 0.6, 0.2
+            text: "JOGO DA FORCA:"
+
+        Label:
+            pos_hint: {"right" : 0.8, "top" : 0.4}
+            size_hint: 0.6, 0.1
+            text: "PAÍSES"
+
+        Button:
+            pos_hint: {"right" : 0.8, "top" : 0.3}
+            size_hint: 0.6, 0.2
+            text: "COMEÇAR"
+            on_release: app.mudar_tela("selecao_tema")
+

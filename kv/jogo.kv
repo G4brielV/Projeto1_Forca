@@ -1,0 +1,13 @@
+<Jogo>:
+    FloatLayout:
+        canvas:
+            Color:
+                rgb: utils.get_color_from_hex("#699cfa")
+            Rectangle:
+                size: self.size
+                pos: self.pos
+        Button:
+            pos_hint: {"right" : 0.8, "top" : 0.3}
+            size_hint: 0.6, 0.2
+            text: "Todos os paises"
+            on_release: app.mudar_tela("home_page")
