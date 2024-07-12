@@ -8,3 +8,6 @@ class SelecaoTema(Screen):
 
 class Jogo(Screen):
     pass
+
+class Final(Screen):
+    pass

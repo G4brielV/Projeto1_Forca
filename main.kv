@@ -1,6 +1,7 @@
 #:include kv/home_page.kv
 #:include kv/selecao_tema.kv
 #:include kv/jogo.kv
+#:include kv/final.kv
 #:import utils kivy.utils
 
 GridLayout:
@@ -16,5 +17,8 @@ GridLayout:
         Jogo:
             name: "jogo"
             id: jogo
+        Final:
+            name: "final"
+            id: final
 
 
