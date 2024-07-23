@@ -6,3 +6,33 @@
             Rectangle:
                 size: self.size
                 pos: self.pos
+        Image:
+            pos_hint: {"right" : 1, "top" : 1}
+            size_hint: 1, 0.55
+            id:img_final
+            source: ""
+
+        Label:
+            pos_hint: {"right" : 0.8, "top" : 0.5}
+            size_hint: 0.6, 0.2
+            id: text_final
+            color:
+            font_size: 40
+            text: ""
+            bold: True
+
+        Label:
+            pos_hint: {"right" : 0.8, "top" : 0.4}
+            size_hint: 0.6, 0.2
+            id: msg_final
+            font_size: 40
+            text: ""
+            bold: True
+
+
+        Button:
+            pos_hint: {"right" : 0.8, "top" : 0.2}
+            size_hint: 0.6, 0.1
+            id: btn_final
+            text: ""
+            on_release: app.mudar_tela("home_page"), app.forca.__init__(),

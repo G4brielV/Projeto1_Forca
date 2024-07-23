@@ -5,17 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2643dc14-3123-4daf-b78c-2a3b6ba513ee" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/kv/final.kv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sla.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Jogo.py" beforeDir="false" afterPath="$PROJECT_DIR$/Jogo.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/botoes.py" beforeDir="false" afterPath="$PROJECT_DIR$/botoes.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kv/final.kv" beforeDir="false" afterPath="$PROJECT_DIR$/kv/final.kv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/kv/home_page.kv" beforeDir="false" afterPath="$PROJECT_DIR$/kv/home_page.kv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/kv/jogo.kv" beforeDir="false" afterPath="$PROJECT_DIR$/kv/jogo.kv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kv/selecao_tema.kv" beforeDir="false" afterPath="$PROJECT_DIR$/kv/selecao_tema.kv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.kv" beforeDir="false" afterPath="$PROJECT_DIR$/main.kv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/telas.py" beforeDir="false" afterPath="$PROJECT_DIR$/telas.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/teste.py" beforeDir="false" afterPath="$PROJECT_DIR$/teste.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sla.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/teste.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/teste2.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,7 +46,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "Python.Jogo.executor": "Run",
+    "Python.Jogo.executor": "Debug",
     "Python.Listas de países.executor": "Run",
     "Python.__init__.executor": "Run",
     "Python.main.executor": "Run",
@@ -57,6 +55,7 @@
     "Python.teste2.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "master",
+    "last_opened_file_path": "C:/Users/oi/Downloads/AplicativoVendas",
     "settings.editor.selected.configurable": "preferences.lookFeel"
   }
 }]]></component>
@@ -77,5 +76,22 @@
       <updated>1720654122443</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="CUSTOM_BOOLEAN_PROPERTIES">
+                <map>
+                  <entry key="Show.Git.Branches" value="false" />
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
