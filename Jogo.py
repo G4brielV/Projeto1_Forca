@@ -91,6 +91,13 @@ class Forca():
         else:
             pagina_jogo.ids["aviso"].text = f'Digite uma letra, "{chute}" não é válido'
 
+    def tentar_palavra(self, chute_palavra):
+        if unidecode(chute_palavra.upper().strip()) == unidecode(self.palavra.upper()):
+            self.ganhou()
+        else:
+            self.perdeu()
+
+
     # Atualizar a tela final para o cenário de vencedor
     def ganhou(self):
         meu_aplicativo = App.get_running_app()
