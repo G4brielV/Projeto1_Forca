@@ -40,30 +40,34 @@
             bold: True
 
         TextInput:
-            pos_hint: {"right" : 0.6, "top" : 0.3}
-            size_hint: 0.4, 0.1
+            pos_hint: {"right" : 0.4, "top" : 0.3}
+            size_hint: 0.2, 0.1
             id: chute_letra
             hint_text: "Digite uma letra"
             multiline:False
             write_tab: False
+            on_text_validate: app.forca.game(chute_letra.text)
+
 
         TextInput:
             pos_hint: {"right" : 0.8, "top" : 0.3}
-            size_hint: 0.2, 0.1
+            size_hint: 0.4, 0.1
             id: chute_palavra
             hint_text: "Digite a palavra"
             multiline:False
             write_tab: False
+            on_text_validate: app.forca.tentar_palavra(chute_palavra.text)
 
 
         Button:
-            pos_hint: {"right" : 0.6, "top" : 0.2}
-            size_hint: 0.4, 0.1
+            pos_hint: {"right" : 0.4, "top" : 0.2}
+            size_hint: 0.2, 0.1
             text: "Tentar Letra"
             on_release: app.forca.game(chute_letra.text)
 
+
         Button:
             pos_hint: {"right" : 0.8, "top" : 0.2}
-            size_hint: 0.2, 0.1
+            size_hint: 0.4, 0.1
             text: "Tentar Palavra"
             on_release: app.forca.tentar_palavra(chute_palavra.text)

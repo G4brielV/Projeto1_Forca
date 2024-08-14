@@ -8,7 +8,7 @@ class Forca():
         '''Zerando as telas para o inicio/reinicio'''
         meu_aplicativo = App.get_running_app() # Puxando o App para conseguir edita-lo
         pagina_jogo = meu_aplicativo.root.ids["jogo"] # Selecionando a tela pelo id
-        pagina_jogo.ids["img_forca"].source = "fotos/forca.png" # Mudando a imagem da página
+        pagina_jogo.ids["img_forca"].source = "fotos/forca.png"  # Mudando a imagem da página
         pagina_jogo.ids["letras_usadas"].text = "" # Zerando a label
 
         self.palavra = None # A palavra sorteada
@@ -55,6 +55,11 @@ class Forca():
         # Zerando o quadro de avisos
         pagina_jogo.ids["aviso"].text = ""
 
+        # Zerando a caixa de chutes de letras
+        pagina_jogo.ids["chute_letra"].text = ""
+
+
+
         # Verifcando se é uma letra válida
         if chute.isalpha() and len(chute) == 1:
             # Verificando se a letra ja não foi testada
@@ -92,6 +97,12 @@ class Forca():
             pagina_jogo.ids["aviso"].text = f'Digite uma letra, "{chute}" não é válido'
 
     def tentar_palavra(self, chute_palavra):
+        meu_aplicativo = App.get_running_app()
+        pagina_jogo = meu_aplicativo.root.ids["jogo"]
+
+        # Zerando a caixa de chute da palavra
+        pagina_jogo.ids["chute_palavra"].text = ""
+
         if unidecode(chute_palavra.upper().strip()) == unidecode(self.palavra.upper()):
             self.ganhou()
         else:
