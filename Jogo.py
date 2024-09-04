@@ -16,6 +16,12 @@ class Forca():
         self.letras_usadas = "" # Todas as letras ja testadas
         self.letras_palavra = None # Todas as letras da palavra, sem repetições, acentos ou caractere especial
 
+        lista = ['Q', 'W', 'E', 'R', 'T', 'Y', 'U', 'I', 'O', 'P',
+                 'A', 'S', 'D', 'F', 'G', 'H', 'J', 'K', 'L',
+                 'Z', 'X', 'C', 'V', 'B', 'N', 'M']
+        for btn in lista:
+            pagina_jogo.ids[f"{btn}"].disabled= False
+
     # Sortear o paísc
     def achar_pais(self, continente = " "):
         # Caso ele escolha "Todos os países"
@@ -47,54 +53,41 @@ class Forca():
         pagina_jogo.ids["espaco_letras"].text = str_nivel_atual
 
     # Funcionalidades padrões do jogo
-    def game(self, chute):
+    def tentar_letra(self, chute):
         meu_aplicativo = App.get_running_app()
         pagina_jogo = meu_aplicativo.root.ids["jogo"]
         chute = unidecode(chute.upper())
 
-        # Zerando o quadro de avisos
-        pagina_jogo.ids["aviso"].text = ""
-
-        # Zerando a caixa de chutes de letras
-        pagina_jogo.ids["chute_letra"].text = ""
-
-
-
-        # Verifcando se é uma letra válida
-        if chute.isalpha() and len(chute) == 1:
-            # Verificando se a letra ja não foi testada
-            if chute in self.letras_usadas:
-                pagina_jogo.ids["aviso"].text = f"Voçê ja digitou a letra: {chute}."
-            else:
-                self.letras_usadas += f" {chute}"
-                pagina_jogo.ids["letras_usadas"].text = self.letras_usadas
-                # Verificando se existe a letra chutada na palavra
-                if chute in self.letras_palavra:
-                    self.letras_palavra.remove(chute)
-                    self.adicionar_letras()
-                    # Verificando se todas as letras ja foram acertadas
-                    if len(self.letras_palavra) == 0:
-                        self.ganhou()
-                else:
-                    # Perde uma vida
-                    self.vida += 1
-                    # Mudando a imagem de acordo com a vida
-                    if self.vida == 1:
-                        pagina_jogo.ids["img_forca"].source = "fotos/boneco_cabeca.png"
-                    elif self.vida == 2:
-                        pagina_jogo.ids["img_forca"].source = "fotos/boneco_tronco.png"
-                    elif self.vida == 3:
-                        pagina_jogo.ids["img_forca"].source = "fotos/boneco_1_perna.png"
-                    elif self.vida == 4:
-                        pagina_jogo.ids["img_forca"].source = "fotos/boneco_2_perna.png"
-                    elif self.vida == 5:
-                        pagina_jogo.ids["img_forca"].source = "fotos/boneco_1_braco.png"
-                    elif self.vida == 6:
-                        pagina_jogo.ids["img_forca"].source = "fotos/boneco_2_braco.png"
-                    elif self.vida == 7:
-                        self.perdeu()
+        pagina_jogo.ids[f'{chute}'].disabled = True
+        if (len(self.letras_usadas)//2) % 5 == 0:
+            self.letras_usadas += '\n'
+        self.letras_usadas += f" {chute}"
+        pagina_jogo.ids["letras_usadas"].text = self.letras_usadas
+        # Verificando se existe a letra chutada na palavra
+        if chute in self.letras_palavra:
+            self.letras_palavra.remove(chute)
+            self.adicionar_letras()
+            # Verificando se todas as letras ja foram acertadas
+            if len(self.letras_palavra) == 0:
+                self.ganhou()
         else:
-            pagina_jogo.ids["aviso"].text = f'Digite uma letra, "{chute}" não é válido'
+            # Perde uma vida
+            self.vida += 1
+            # Mudando a imagem de acordo com a vida
+            if self.vida == 1:
+                pagina_jogo.ids["img_forca"].source = "fotos/boneco_cabeca.png"
+            elif self.vida == 2:
+                pagina_jogo.ids["img_forca"].source = "fotos/boneco_tronco.png"
+            elif self.vida == 3:
+                pagina_jogo.ids["img_forca"].source = "fotos/boneco_1_perna.png"
+            elif self.vida == 4:
+                    pagina_jogo.ids["img_forca"].source = "fotos/boneco_2_perna.png"
+            elif self.vida == 5:
+                pagina_jogo.ids["img_forca"].source = "fotos/boneco_1_braco.png"
+            elif self.vida == 6:
+                pagina_jogo.ids["img_forca"].source = "fotos/boneco_2_braco.png"
+            elif self.vida == 7:
+                self.perdeu()
 
     def tentar_palavra(self, chute_palavra):
         meu_aplicativo = App.get_running_app()

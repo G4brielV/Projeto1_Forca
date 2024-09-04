@@ -7,51 +7,286 @@
                 size: self.size
                 pos: self.pos
         Image:
-            pos_hint: {"right" : 1, "top" : 1}
+            pos_hint: {"right" : 0.9, "top" : 1}
             size_hint: 1, 0.55
             id:img_forca
             source: "fotos/forca.png"
 
+
         Label:
-            pos_hint: {"right" : 1, "top" : 0.9}
+            pos_hint: {"right" : 1, "top" : 0.93}
             size_hint: 0.6, 0.2
             text: "LETRAS USADAS"
             bold: True
 
-        Label:
+        Image:
             pos_hint: {"right" : 1, "top" : 0.8}
+            size_hint: 0.6, 0.15
+            id: img_quadrado
+            source: "fotos/quadrado.png"
+
+
+        Label:
+            pos_hint: {"right" : 1, "top" : 0.85}
             size_hint: 0.6, 0.2
             id: letras_usadas
             text: ""
             bold: True
 
         Label:
-            pos_hint: {"right" : 0.5, "top" : 0.9}
+            pos_hint: {"right" : 0.45, "top" : 0.9}
             size_hint: 0.6, 0.2
             id: aviso
             text: ""
             bold: True
 
         Label:
-            pos_hint: {"right" : 0.8, "top" : 0.5}
+            pos_hint: {"right" : 0.7, "top" : 0.5}
             size_hint: 0.6, 0.2
             id: espaco_letras
             text: ""
             bold: True
 
-        TextInput:
-            pos_hint: {"right" : 0.4, "top" : 0.3}
-            size_hint: 0.2, 0.1
-            id: chute_letra
-            hint_text: "Digite uma letra"
-            multiline:False
-            write_tab: False
-            on_text_validate: app.forca.game(chute_letra.text)
+
+
+		Button:
+			pos_hint: {"right" : 0.2, "top" : 0.3}
+			size_hint: 0.045, 0.045
+			background_color: 0, 0, 0, 1
+	        bold: True
+			id: Q
+			text: 'Q'
+			on_release: app.forca.tentar_letra(Q.text)
+
+		Button:
+			pos_hint: {"right" : 0.25, "top" : 0.3}
+			size_hint: 0.045, 0.045
+			background_color: 0, 0, 0, 1
+	        bold: True
+			id: W
+			text: 'W'
+			on_release: app.forca.tentar_letra(W.text)
+
+		Button:
+			pos_hint: {"right" : 0.3, "top" : 0.3}
+			size_hint: 0.045, 0.045
+			background_color: 0, 0, 0, 1
+	        bold: True
+			id: E
+			text: 'E'
+			on_release: app.forca.tentar_letra(E.text)
+
+	    Button:
+			pos_hint: {"right" : 0.35, "top" : 0.3}
+			size_hint: 0.045, 0.045
+			background_color: 0, 0, 0, 1
+	        bold: True
+			id: R
+			text: 'R'
+			on_release: app.forca.tentar_letra(R.text)
+
+		Button:
+			pos_hint: {"right" : 0.4, "top" : 0.3}
+			size_hint: 0.045, 0.045
+			background_color: 0, 0, 0, 1
+	        bold: True
+			id: T
+			text: 'T'
+			on_release: app.forca.tentar_letra(T.text)
+
+		Button:
+			pos_hint: {"right" : 0.45, "top" : 0.3}
+			size_hint: 0.045, 0.045
+			background_color: 0, 0, 0, 1
+	        bold: True
+			id: Y
+			text: 'Y'
+			on_release: app.forca.tentar_letra(Y.text)
+
+		Button:
+			pos_hint: {"right" : 0.5, "top" : 0.3}
+			size_hint: 0.045, 0.045
+			background_color: 0, 0, 0, 1
+	        bold: True
+			id: U
+			text: 'U'
+			on_release: app.forca.tentar_letra(U.text)
+
+		Button:
+			pos_hint: {"right" : 0.55, "top" : 0.3}
+			size_hint: 0.045, 0.045
+			background_color: 0, 0, 0, 1
+	        bold: True
+			id: I
+			text: 'I'
+			on_release: app.forca.tentar_letra(I.text)
+
+		Button:
+			pos_hint: {"right" : 0.6, "top" : 0.3}
+			size_hint: 0.045, 0.045
+			background_color: 0, 0, 0, 1
+	        bold: True
+			id: O
+			text: 'O'
+			on_release: app.forca.tentar_letra(O.text)
+
+		Button:
+			pos_hint: {"right" : 0.65, "top" : 0.3}
+			size_hint: 0.045, 0.045
+			background_color: 0, 0, 0, 1
+	        bold: True
+			id: P
+			text: 'P'
+			on_release: app.forca.tentar_letra(P.text)
+
+		Button:
+			pos_hint: {"right" : 0.22, "top" : 0.25}
+			size_hint: 0.045, 0.045
+			background_color: 0, 0, 0, 1
+	        bold: True
+			id: A
+			text: 'A'
+			on_release: app.forca.tentar_letra(A.text)
+
+		Button:
+			pos_hint: {"right" : 0.27, "top" : 0.25}
+			size_hint: 0.045, 0.045
+			background_color: 0, 0, 0, 1
+	        bold: True
+			id: S
+			text: 'S'
+			on_release: app.forca.tentar_letra(S.text)
+
+		Button:
+			pos_hint: {"right" : 0.32, "top" : 0.25}
+			size_hint: 0.045, 0.045
+			background_color: 0, 0, 0, 1
+	        bold: True
+			id: D
+			text: 'D'
+			on_release: app.forca.tentar_letra(D.text)
+
+		Button:
+			pos_hint: {"right" : 0.37, "top" : 0.25}
+			size_hint: 0.045, 0.045
+			background_color: 0, 0, 0, 1
+	        bold: True
+			id: F
+			text: 'F'
+			on_release: app.forca.tentar_letra(F.text)
+
+		Button:
+			pos_hint: {"right" : 0.42, "top" : 0.25}
+			size_hint: 0.045, 0.045
+			background_color: 0, 0, 0, 1
+	        bold: True
+			id: G
+			text: 'G'
+			on_release: app.forca.tentar_letra(G.text)
+
+		Button:
+			pos_hint: {"right" : 0.47, "top" : 0.25}
+			size_hint: 0.045, 0.045
+			background_color: 0, 0, 0, 1
+	        bold: True
+			id: H
+			text: 'H'
+			on_release: app.forca.tentar_letra(H.text)
+
+		Button:
+			pos_hint: {"right" : 0.52, "top" : 0.25}
+			size_hint: 0.045, 0.045
+			background_color: 0, 0, 0, 1
+	        bold: True
+			id: J
+			text: 'J'
+			on_release: app.forca.tentar_letra(J.text)
+
+		Button:
+			pos_hint: {"right" : 0.57, "top" : 0.25}
+			size_hint: 0.045, 0.045
+			background_color: 0, 0, 0, 1
+	        bold: True
+			id: K
+			text: 'K'
+			on_release: app.forca.tentar_letra(K.text)
+
+		Button:
+			pos_hint: {"right" : 0.62, "top" : 0.25}
+			size_hint: 0.045, 0.045
+			background_color: 0, 0, 0, 1
+	        bold: True
+			id: L
+			text: 'L'
+			on_release: app.forca.tentar_letra(L.text)
+
+		Button:
+			pos_hint: {"right" : 0.26, "top" : 0.2}
+			size_hint: 0.045, 0.045
+			background_color: 0, 0, 0, 1
+	        bold: True
+			id: Z
+			text: 'Z'
+			on_release: app.forca.tentar_letra(Z.text)
+
+		Button:
+			pos_hint: {"right" : 0.31, "top" : 0.2}
+			size_hint: 0.045, 0.045
+			background_color: 0, 0, 0, 1
+	        bold: True
+			id: X
+			text: 'X'
+			on_release: app.forca.tentar_letra(X.text)
+
+		Button:
+			pos_hint: {"right" : 0.36, "top" : 0.2}
+			size_hint: 0.045, 0.045
+			background_color: 0, 0, 0, 1
+	        bold: True
+			id: C
+			text: 'C'
+			on_release: app.forca.tentar_letra(C.text)
+
+	    Button:
+			pos_hint: {"right" : 0.41, "top" : 0.2}
+			size_hint: 0.045, 0.045
+			background_color: 0, 0, 0, 1
+	        bold: True
+			id: V
+			text: 'V'
+			on_release: app.forca.tentar_letra(V.text)
+
+		Button:
+			pos_hint: {"right" : 0.46, "top" : 0.2}
+			size_hint: 0.045, 0.045
+			background_color: 0, 0, 0, 1
+	        bold: True
+			id: B
+			text: 'B'
+			on_release: app.forca.tentar_letra(B.text)
+
+		Button:
+			pos_hint: {"right" : 0.51, "top" : 0.2}
+			size_hint: 0.045, 0.045
+			background_color: 0, 0, 0, 1
+	        bold: True
+			id: N
+			text: 'N'
+			on_release: app.forca.tentar_letra(N.text)
+
+		Button:
+			pos_hint: {"right" : 0.56, "top" : 0.2}
+			size_hint: 0.045, 0.045
+			background_color: 0, 0, 0, 1
+	        bold: True
+			id: M
+			text: 'M'
+			on_release: app.forca.tentar_letra(M.text)
 
 
         TextInput:
-            pos_hint: {"right" : 0.8, "top" : 0.3}
-            size_hint: 0.4, 0.1
+            pos_hint: {"right" : 0.85, "top" : 0.3}
+            size_hint: 0.15, 0.1
             id: chute_palavra
             hint_text: "Digite a palavra"
             multiline:False
@@ -60,14 +295,7 @@
 
 
         Button:
-            pos_hint: {"right" : 0.4, "top" : 0.2}
-            size_hint: 0.2, 0.1
-            text: "Tentar Letra"
-            on_release: app.forca.game(chute_letra.text)
-
-
-        Button:
-            pos_hint: {"right" : 0.8, "top" : 0.2}
-            size_hint: 0.4, 0.1
+            pos_hint: {"right" : 0.85, "top" : 0.2}
+            size_hint: 0.15, 0.1
             text: "Tentar Palavra"
             on_release: app.forca.tentar_palavra(chute_palavra.text)
