@@ -6,6 +6,21 @@
             Rectangle:
                 size: self.size
                 pos: self.pos
+
+        ImageButton:
+            pos_hint: {"right" : 0.9, "top" : 0.98}
+            size_hint: 0.08, 0.08
+            id: reiniciar_jogo
+            source: "fotos/reiniciar.png"
+            on_release: app.mudar_tela("home_page"), app.forca.__init__()
+
+        ImageButton:
+            pos_hint: {"right" : 1, "top" : 0.98}
+            size_hint: 0.1, 0.1
+            id: sair_jogo
+            source: "fotos/sair.png"
+            on_release: app.get_running_app().stop()
+
         Image:
             pos_hint: {"right" : 0.9, "top" : 1}
             size_hint: 1, 0.55
@@ -25,18 +40,19 @@
             id: img_quadrado
             source: "fotos/quadrado.png"
 
+        ImageButton:
+            pos_hint: {"right" : 0.1, "top" : 1}
+            size_hint: 0.1, 0.15
+            id: img_lampada
+            source: "fotos/lampada.png"
+            on_release: app.forca.tentar_letra(Q.text)
+
+
 
         Label:
             pos_hint: {"right" : 1, "top" : 0.85}
             size_hint: 0.6, 0.2
             id: letras_usadas
-            text: ""
-            bold: True
-
-        Label:
-            pos_hint: {"right" : 0.45, "top" : 0.9}
-            size_hint: 0.6, 0.2
-            id: aviso
             text: ""
             bold: True
 

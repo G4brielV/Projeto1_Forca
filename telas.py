@@ -3,7 +3,7 @@ from kivy.uix.screenmanager import Screen
 class HomePage(Screen):
     pass
 
-class SelecaoTema(Screen):
+class SelecaoPaises(Screen):
     pass
 
 class Jogo(Screen):

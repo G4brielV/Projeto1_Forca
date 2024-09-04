@@ -22,7 +22,7 @@ class Forca():
         for btn in lista:
             pagina_jogo.ids[f"{btn}"].disabled= False
 
-    # Sortear o paísc
+    # Sortear o país
     def achar_pais(self, continente = " "):
         # Caso ele escolha "Todos os países"
         if continente == " ":
@@ -42,15 +42,6 @@ class Forca():
         pagina_jogo = meu_aplicativo.root.ids["jogo"]
         pagina_jogo.ids["espaco_letras"].text = str_inicio
 
-    # Atualizar a palavra na tela do jogo com os acertos
-    def adicionar_letras(self):
-        nivel_atual = [self.palavra.upper()[e] if letra in self.letras_usadas or letra in '- ' else '_' for e,letra in enumerate(unidecode(self.palavra.upper()))]
-        str_nivel_atual = " ".join(nivel_atual)
-
-        # Modificando o texto na tela
-        meu_aplicativo = App.get_running_app()
-        pagina_jogo = meu_aplicativo.root.ids["jogo"]
-        pagina_jogo.ids["espaco_letras"].text = str_nivel_atual
 
     # Funcionalidades padrões do jogo
     def tentar_letra(self, chute):
@@ -89,6 +80,17 @@ class Forca():
             elif self.vida == 7:
                 self.perdeu()
 
+    # Atualizar a palavra na tela do jogo com os acertos
+    def adicionar_letras(self):
+        nivel_atual = [self.palavra.upper()[e] if letra in self.letras_usadas or letra in '- ' else '_' for e, letra
+                           in enumerate(unidecode(self.palavra.upper()))]
+        str_nivel_atual = " ".join(nivel_atual)
+
+        # Modificando o texto na tela
+        meu_aplicativo = App.get_running_app()
+        pagina_jogo = meu_aplicativo.root.ids["jogo"]
+        pagina_jogo.ids["espaco_letras"].text = str_nivel_atual
+
     def tentar_palavra(self, chute_palavra):
         meu_aplicativo = App.get_running_app()
         pagina_jogo = meu_aplicativo.root.ids["jogo"]
@@ -125,5 +127,4 @@ class Forca():
         pagina_final.ids["msg_final"].text = f"A palavra era: {self.palavra}"
         pagina_final.ids["btn_final"].text = "Tentar Novamente"
         meu_aplicativo.mudar_tela("final")
-
 

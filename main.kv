@@ -1,5 +1,5 @@
 #:include kv/home_page.kv
-#:include kv/selecao_tema.kv
+#:include kv/selecao_paises.kv
 #:include kv/jogo.kv
 #:include kv/final.kv
 #:import utils kivy.utils
@@ -11,9 +11,9 @@ GridLayout:
         HomePage:
             name: "home_page"
             id: home_page
-        SelecaoTema:
-            name: "selecao_tema"
-            id: selecao_tema
+        SelecaoPaises:
+            name: "selecao_paises"
+            id: selecao_paises
         Jogo:
             name: "jogo"
             id: jogo
@@ -22,3 +22,13 @@ GridLayout:
             id: final
 
 
+<RoundedButton@Button>
+    background_color: (0,0,0,0)
+    backgroud_normal: ''
+    canvas.before:
+        Color:
+            rgba: (.4,.4,.4,1) if self.state=='normal' else (0,.7,.7,1)
+        RoundedRectangle:
+            size: self.size
+            pos: self.pos
+            radius: [58]

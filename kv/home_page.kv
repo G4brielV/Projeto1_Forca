@@ -7,6 +7,13 @@
                 size: self.size
                 pos: self.pos
 
+        ImageButton:
+            pos_hint: {"right" : 1, "top" : 0.98}
+            size_hint: 0.1, 0.1
+            id: sair_selecao_paises
+            source: "fotos/sair.png"
+            on_release: app.get_running_app().stop()
+
         Image:
             pos_hint: {"right" : 1, "top" : 1}
             size_hint: 1, 0.55
@@ -15,17 +22,21 @@
         Label:
             pos_hint: {"right" : 0.8, "top" : 0.5}
             size_hint: 0.6, 0.2
+            font_size: 20
+            bold: True
             text: "JOGO DA FORCA: "
 
 
         Label:
             pos_hint: {"right" : 0.8, "top" : 0.4}
             size_hint: 0.6, 0.1
+            font_size: 20
+            bold: True
             text: "PAÍSES"
 
-        Button:
+        RoundedButton:
             pos_hint: {"right" : 0.8, "top" : 0.3}
             size_hint: 0.6, 0.2
             text: "COMEÇAR"
-            on_release: app.mudar_tela("selecao_tema")
+            on_release: app.mudar_tela("selecao_paises")
 
