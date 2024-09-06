@@ -27,6 +27,22 @@
             id:img_forca
             source: "fotos/forca.png"
 
+        Label:
+            pos_hint: {"right" : 0.42, "top" : 0.85}
+            size_hint: 0.6, 0.2
+            font_size: 20
+            id: dica_continente
+            text: ""
+            bold: True
+
+        Label:
+            pos_hint: {"right" : 0.41, "top" : 0.8}
+            size_hint: 0.6, 0.2
+            font_size: 20
+            id: dica_letra
+            text: ""
+            bold: True
+
 
         Label:
             pos_hint: {"right" : 1, "top" : 0.93}
@@ -43,10 +59,9 @@
         ImageButton:
             pos_hint: {"right" : 0.1, "top" : 1}
             size_hint: 0.1, 0.15
-            id: img_lampada
+            id: img_lampada_dica
             source: "fotos/lampada.png"
-            on_release: app.forca.tentar_letra(Q.text)
-
+            on_release: app.popup_dica()
 
 
         Label:
