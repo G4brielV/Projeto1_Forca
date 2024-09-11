@@ -166,7 +166,7 @@ class Forca():
 
         pagina_final.ids["img_final"].source = "fotos/morto.png"
         pagina_final.ids["text_final"].color = 1, 0, 0
-        pagina_final.ids["text_final"].text = "Voçê Perdeu!!"
+        pagina_final.ids["text_final"].text = "Você Perdeu!!"
         pagina_final.ids["msg_final"].text = f"A palavra era: {self.pais}"
         pagina_final.ids["btn_final"].text = "Tentar Novamente"
         meu_aplicativo.mudar_tela("final")
